@@ -1,1 +1,1 @@
-# webcl-fs21-2-react-poc
+# webcl-fs21-2-react-eyes
