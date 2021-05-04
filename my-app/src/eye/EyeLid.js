@@ -23,19 +23,21 @@ class EyeLid extends React.Component {
                     <feOffset       dx="0" dy="8" />
                     <feColorMatrix  type="matrix"
                                     values="0 0 0 0  0
-                                0 0 0 0  0
-                                0 0 0 0  0
-                                0 0 0 .5 0"/>
+                                            0 0 0 0  0
+                                            0 0 0 0  0
+                                            0 0 0 .5 0"
+                    />
                     <feBlend        in="SourceGraphic" mode="normal"/>
                 </filter>
                 {
                     this.props.open 
                     ?   <g ref = {this.eyeLid}>
-                            <path d="M0 60 A60,60 0 0,1 120,60 A60,30 0 0,0 0,60 Z" opacity="1" fill="#FDDC99" fill-opacity="1" filter="url(#shadow)" />
-                            <path d="M0 60 A60,60 0 0,0 120,60 A60,40 0 0,1 0,60 Z" opacity="1" fill="#F4CB76" fill-opacity="1" />
+                            <path d="M0 60 A60,60 0 0,1 120,60 A60,30 0 0,0 0,60 Z" opacity="1" fill="#FDDC99" fillOpacity="1" filter="url(#shadow)" />
+                            <path d="M0 60 A60,60 0 0,0 120,60 A60,40 0 0,1 0,60 Z" opacity="1" fill="#F4CB76" fillOpacity="1" />
                         </g>
                     :   <g ref = {this.eyeLid}>
-                            <path d="M0 60 A60,60 0 0,1 120,60 A60,40 0 0,1 0,60 Z" opacity="1" fill="#FDDC99" fill-opacity="1" />
+                            <path d="M0 60 A60,60 0 0,1 120,60 A60,40 0 0,1 0,60 Z" opacity="1" fill="#FDDC99" fillOpacity="1" />
+                            <path d="M0 60 A60,60 0 0,0 120,60 A60,40 0 0,1 0,60 Z" opacity="1" fill="#F4CB76" fillOpacity="1" />
                         </g>
                 }
             </svg>

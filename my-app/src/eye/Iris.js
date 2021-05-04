@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 class Iris extends React.Component{
   constructor(props){
     super(props)
@@ -18,7 +17,6 @@ class Iris extends React.Component{
   }
 
   componentDidMount(){
-
     //origin auslesen
     const {x, y, width, height} = this.iris.current.getBoundingClientRect()
     
@@ -34,7 +32,6 @@ class Iris extends React.Component{
 
 
 setupMouseListener = () => {
-
   document.addEventListener("mousemove", (event) => {
     const {clientX, clientY} = event
 
@@ -57,7 +54,6 @@ setupMouseListener = () => {
                           ? Math.min(maxIrisYMovement, scaledY)
                           : Math.max(-maxIrisYMovement, scaledY)
 
- 
     this.iris.current.style.transform = `translateX(${actualXMovement}px) translateY(${actualYMovement}px)`;
   })
 }
@@ -67,14 +63,14 @@ setupMouseListener = () => {
       <div>
         <svg style={{visibility: this.props.isOpen ? 'visible' : 'hidden' }}>
           <radialGradient id="gradient1" gradientUnits="objectBoundingBox" cx="50%" cy="50%" r="50%">
-            <stop offset= "38%" stop-color="#000000" stop-opacity="1" />
-            <stop offset= "46%" stop-color="#073F80" stop-opacity="1" />
-            <stop offset= "90%" stop-color="#8EC0DD" stop-opacity="1" />
-            <stop offset="100%" stop-color="#2F3A46" stop-opacity="1" />
+            <stop offset= "38%" stopColor="#000000" stopOpacity="1" />
+            <stop offset= "46%" stopColor="#073F80" stopOpacity="1" />
+            <stop offset= "90%" stopColor="#8EC0DD" stopOpacity="1" />
+            <stop offset="100%" stopColor="#2F3A46" stopOpacity="1" />
           </radialGradient>
           <g ref={this.iris}>
             <ellipse cx="60" cy="60" rx="30" ry="30" opacity="1" fill="url(#gradient1)" />
-            <ellipse cx="50" cy="50" rx="7"  ry="7"  opacity="1" fill="#FFFFFF" fill-opacity="0.8"/>
+            <ellipse cx="50" cy="50" rx="7"  ry="7"  opacity="1" fill="#FFFFFF" fillOpacity="0.8"/>
           </g>
         </svg>
       </div>
