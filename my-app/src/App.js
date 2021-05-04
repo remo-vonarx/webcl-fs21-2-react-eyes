@@ -4,8 +4,8 @@ import Eye from './eye/Eye'
 function App() {
   return (
     <div className="App">
-        <Eye></Eye>
-        <Eye></Eye>
+        <Eye side="left"/>
+        <Eye side="right"/>
     </div>
   );
 }
